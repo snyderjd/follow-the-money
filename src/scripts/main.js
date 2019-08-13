@@ -1,5 +1,25 @@
-const message = "Your Webpack application is set up and ready to go. Please start writing code."
+import data from "./data.js";
 
-document.querySelector("#container").innerHTML = `<h1>${message}</h1>`
+const politicians = [];
 
-console.log(message)
+// Chain promises together to get the necessary data to make a card with all of a politician's information
+data.getPoliticians()
+    .then(parsedItems => {
+        parsedItems.forEach(item => {
+            const politician = {item};
+            politicians.push(politician);
+        });
+    return politicians;
+}).then(politicians => {
+    politicians.forEach(politician => {
+
+        console.log(politician.item.billPoliticians);
+        politician.item.billPoliticians.forEach(bP => {
+            console.log(bP.billId);
+            data.getBill(bP.billId)
+                .then(parsedBill => {
+                    politician.item.billPoliticians.push(parsedBill);
+                });
+        });
+    });
+});
