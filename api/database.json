@@ -1,24 +1,385 @@
 {
-  "posts": [
+  "corporations": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Bank of America"
     },
     {
       "id": 2,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "JP Morgan"
+    },
+    {
+      "id": 3,
+      "name": "John Deere"
+    },
+    {
+      "id": 4,
+      "name": "Caterpillar"
+    },
+    {
+      "id": 5,
+      "name": "Merck"
+    },
+    {
+      "id": 6,
+      "name": "Pfizer"
+    },
+    {
+      "id": 7,
+      "name": "Apple"
+    },
+    {
+      "id": 8,
+      "name": "Facebook"
+    },
+    {
+      "id": 9,
+      "name": "Exxon Mobil"
+    },
+    {
+      "id": 10,
+      "name": "Kinder Morgan"
     }
   ],
-  "comments": [
+  "corpDonations": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "corporationId": 1,
+      "pacId": 2,
+      "amount": 10000,
+      "date": "09-10-2018"
+    },
+    {
+      "id": 2,
+      "corporationId": 2,
+      "pacId": 2,
+      "amount": 12000,
+      "date": "09-19-2018"
+    },
+    {
+      "id": 3,
+      "corporationId": 3,
+      "pacId": 3,
+      "amount": 11000,
+      "date": "10-03-2018"
+    },
+    {
+      "id": 4,
+      "corporationId": 4,
+      "pacId": 3,
+      "amount": 9500,
+      "date": "10-06-2018"
+    },
+    {
+      "id": 5,
+      "corporationId": 5,
+      "pacId": 4,
+      "amount": 13500,
+      "date": "10-17-2018"
+    },
+    {
+      "id": 6,
+      "corporationId": 6,
+      "pacId": 4,
+      "amount": 12500,
+      "date": "10-30-2018"
+    },
+    {
+      "id": 7,
+      "corporationId": 7,
+      "pacId": 5,
+      "amount": 11500,
+      "date": "11-04-2018"
+    },
+    {
+      "id": 8,
+      "corporationId": 8,
+      "pacId": 5,
+      "amount": 10500,
+      "date": "11-09-2018"
+    },
+    {
+      "id": 9,
+      "corporationId": 9,
+      "pacId": 1,
+      "amount": 14000,
+      "date": "11-14-2018"
+    },
+    {
+      "id": 10,
+      "corporationId": 10,
+      "pacId": 1,
+      "amount": 12000,
+      "date": "11-22-2018"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "pacs": [
+    {
+      "id": 1,
+      "name": "Big Energy 4 Life"
+    },
+    {
+      "id": 2,
+      "name": "Show Me the Money"
+    },
+    {
+      "id": 3,
+      "name": "America Needs Farmers"
+    },
+    {
+      "id": 4,
+      "name": "Drug Money"
+    },
+    {
+      "id": 5,
+      "name": "Coders 4 Life"
+    }
+  ],
+  "pacDonations": [
+    {
+      "id": 1,
+      "pacId": 1,
+      "politicianId": 5,
+      "amount": 5000,
+      "donationDate": "04-15-2019"
+    },
+    {
+      "id": 2,
+      "pacId": 2,
+      "politicianId": 4,
+      "amount": 7000,
+      "donationDate": "04-19-2019"
+    },
+    {
+      "id": 3,
+      "pacId": 3,
+      "politicianId": 3,
+      "amount": 3500,
+      "donationDate": "03-07-2019"
+    },
+    {
+      "id": 4,
+      "pacId": 4,
+      "politicianId": 2,
+      "amount": 4000,
+      "donationDate": "02-09-2019"
+    },
+    {
+      "id": 5,
+      "pacId": 5,
+      "politicianId": 1,
+      "amount": 8000,
+      "donationDate": "05-14-2019"
+    },
+    {
+      "id": 6,
+      "pacId": 1,
+      "politicianId": 5,
+      "amount": 5500,
+      "donationDate": "05-17-2019"
+    },
+    {
+      "id": 7,
+      "pacId": 2,
+      "politicianId": 4,
+      "amount": 4000,
+      "donationDate": "05-29-2019"
+    },
+    {
+      "id": 8,
+      "pacId": 3,
+      "politicianId": 3,
+      "amount": 6000,
+      "donationDate": "06-05-2019"
+    },
+    {
+      "id": 9,
+      "pacId": 4,
+      "politicianId": 2,
+      "amount": 6500,
+      "donationDate": "06-13-2019"
+    },
+    {
+      "id": 10,
+      "pacId": 5,
+      "politicianId": 4,
+      "amount": 3500,
+      "donationDate": "04-02-2019"
+    }
+  ],
+  "politicians": [
+    {
+      "id": 1,
+      "name": "Randy Marsh"
+    },
+    {
+      "id": 2,
+      "name": "Stan Marsh"
+    },
+    {
+      "id": 3,
+      "name": "Eric Cartman"
+    },
+    {
+      "id": 4,
+      "name": "Kyle Brovlovsky"
+    },
+    {
+      "id": 5,
+      "name": "Gerald Brovlovsky"
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
+      "name": "Energy Subsidies Bill",
+      "interestId": 1
+    },
+    {
+      "id": 2,
+      "name": "Raise Drug Prices Bill",
+      "interestId": 2
+    },
+    {
+      "id": 3,
+      "name": "Make More Developers Act",
+      "interestId": 3
+    },
+    {
+      "id": 4,
+      "name": "Ag Subsidies Bill",
+      "interestId": 4
+    },
+    {
+      "id": 5,
+      "name": "Print More Money Bill",
+      "interestId": 5
+    }
+  ],
+  "billPoliticians": [
+    {
+      "id": 1,
+      "billId": 1,
+      "politicianId": 1
+    },
+    {
+      "id": 2,
+      "billId": 1,
+      "politicianId": 2
+    },
+    {
+      "id": 3,
+      "billId": 2,
+      "politicianId": 2
+    },
+    {
+      "id": 4,
+      "billId": 2,
+      "politicianId": 3
+    },
+    {
+      "id": 5,
+      "billId": 3,
+      "politicianId": 3
+    },
+    {
+      "id": 6,
+      "billId": 3,
+      "politicianId": 4
+    },
+    {
+      "id": 7,
+      "billId": 4,
+      "politicianId": 4
+    },
+    {
+      "id": 8,
+      "billId": 4,
+      "politicianId": 5
+    },
+    {
+      "id": 9,
+      "billId": 5,
+      "politicianId": 5
+    },
+    {
+      "id": 10,
+      "billId": 5,
+      "politicianId": 1
+    }
+  ],
+  "interests": [
+    {
+      "id": 1,
+      "name": "Energy"
+    },
+    {
+      "id": 2,
+      "name": "Pharmaceutical"
+    },
+    {
+      "id": 3,
+      "name": "Technology"
+    },
+    {
+      "id": 4,
+      "name": "Industrial"
+    },
+    {
+      "id": 5,
+      "name": "Finance"
+    }
+  ],
+  "corporationInterests": [
+    {
+      "id": 1,
+      "corporationId": 1,
+      "interestId": 5
+    },
+    {
+      "id": 2,
+      "corporationId": 2,
+      "interestId": 5
+    },
+    {
+      "id": 3,
+      "corporationId": 3,
+      "interestId": 4
+    },
+    {
+      "id": 4,
+      "corporationId": 4,
+      "interestId": 4
+    },
+    {
+      "id": 5,
+      "corporationId": 5,
+      "interestId": 2
+    },
+    {
+      "id": 6,
+      "corporationId": 6,
+      "interestId": 2
+    },
+    {
+      "id": 7,
+      "corporationId": 7,
+      "interestId": 3
+    },
+    {
+      "id": 8,
+      "corporationId": 8,
+      "interestId": 3
+    },
+    {
+      "id": 9,
+      "corporationId": 9,
+      "interestId": 1
+    },
+    {
+      "id": 10,
+      "corporationId": 10,
+      "interestId": 1
+    }
+  ]
 }
