@@ -10,6 +10,10 @@ const data = Object.create({
     getBill: (billId) => {
         return fetch(`http://localhost:8088/bills/${billId}?_expand=interest`)
             .then(response => response.json());
+    },
+    getPac: (pacId) => {
+        return fetch(`http://localhost:8088/pacs/${pacId}`)
+            .then(response => response.json());
     }
 });
 

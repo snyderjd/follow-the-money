@@ -13,13 +13,23 @@ data.getPoliticians()
 }).then(politicians => {
     politicians.forEach(politician => {
 
-        console.log(politician.item.billPoliticians);
         politician.item.billPoliticians.forEach(bP => {
-            console.log(bP.billId);
             data.getBill(bP.billId)
                 .then(parsedBill => {
                     politician.item.billPoliticians.push(parsedBill);
                 });
         });
     });
+    console.log(politicians);
+    politicians.forEach(politician => {
+        politician.item.pacDonations.forEach(pacDon => {
+            const pacId = pacDon.pacId;
+            data.getPac(pacId).then(parsedPac => {
+                politician.item.pacDonations.push(parsedPac);
+                console.log(politician);
+            });
+        });
+    });
 });
+
+
